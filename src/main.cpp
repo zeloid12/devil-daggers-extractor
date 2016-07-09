@@ -9,11 +9,16 @@
 #include "libs.h"
 
 #include "chunk/chunk.h"
+#if 0
 #include "chunk/texture.h"
+#endif
 #include "chunk/shader.h"
 #include "chunk/audio.h"
 #include "chunk/model_binding.h"
 #include "chunk/model.h"
+
+
+#include "wx/wx.h"
 
 std::map<uint16_t, std::function<Chunk*()>> Chunk::m_factory;
 
@@ -109,7 +114,9 @@ int main(int argc, char** argv)
     }
 
     Chunk::registerType(CHUNK_AUDIO, std::bind(Audio::create));
+#if 0
     Chunk::registerType(CHUNK_TEXTURE, std::bind(Texture::create));
+#endif
     Chunk::registerType(CHUNK_SHADER, std::bind(Shader::create));
     Chunk::registerType(CHUNK_MODEL_BINDS, std::bind(ModelBinding::create));
     Chunk::registerType(CHUNK_MODEL, std::bind(Model::create));

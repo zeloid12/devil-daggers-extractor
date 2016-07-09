@@ -3,5 +3,6 @@
 *.db
 *.VC.*
 /bin/*
+!/bin/wx*.dll
 /tmp/*
 *.user

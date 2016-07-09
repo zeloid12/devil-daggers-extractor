@@ -1,3 +1,1 @@
-/I ..\ext\lodepng\
-/I ..\ext\fbx\include\
-/I ..\src\
+/I ..\ext\wxwidgets\include\
