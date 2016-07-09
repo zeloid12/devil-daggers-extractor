@@ -1,3 +1,6 @@
+#include "wx/wx.h"
+
+
 #include <fstream>
 #include <iostream>
 #include <vector>
@@ -16,9 +19,6 @@
 #include "chunk/audio.h"
 #include "chunk/model_binding.h"
 #include "chunk/model.h"
-
-
-#include "wx/wx.h"
 
 std::map<uint16_t, std::function<Chunk*()>> Chunk::m_factory;
 
@@ -73,6 +73,7 @@ const char* getFolder(uint16_t type)
     return nullptr;
 }
 
+#if 0
 int main(int argc, char** argv)
 {
     if (argc != 3)
@@ -235,3 +236,31 @@ int main(int argc, char** argv)
 
     return 0;
 }
+
+#endif
+
+class MyProjectApp final : public wxApp
+{
+public:
+
+    MyProjectApp();
+    virtual ~MyProjectApp();
+    virtual bool OnInit() override;
+};
+
+MyProjectApp::MyProjectApp()
+{
+}
+
+MyProjectApp::~MyProjectApp()
+{
+}
+
+bool MyProjectApp::OnInit()
+{
+    wxFrame* mainFrame = new wxFrame(nullptr, wxID_ANY, L"MyProject");
+    mainFrame->Show(true);
+    return true;
+}
+
+wxIMPLEMENT_APP(MyProjectApp);

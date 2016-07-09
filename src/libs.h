@@ -8,4 +8,4 @@
 
 #define WXWIDGETS_LIB(LIB) WXWIDGETS_LIB_PATH #LIB WXWIDGETS_LIB_EXT
 
-#pragma comment(lib, WXWIDGETS_LIB(wxbase31u))
+//#pragma comment(lib, WXWIDGETS_LIB(wxbase31u))
