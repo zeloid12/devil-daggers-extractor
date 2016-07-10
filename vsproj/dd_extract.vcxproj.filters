@@ -14,9 +14,12 @@
     <ClCompile Include="..\src\chunk\model.cpp">
       <Filter>chunk</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\app.cpp" />
+    <ClCompile Include="..\src\frame\frame_main.cpp">
+      <Filter>frame</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\src\chunk.h" />
     <ClInclude Include="..\src\libs.h" />
     <ClInclude Include="..\src\chunk\model.h">
       <Filter>chunk</Filter>
@@ -30,16 +33,20 @@
     <ClInclude Include="..\src\chunk\audio.h">
       <Filter>chunk</Filter>
     </ClInclude>
+    <ClInclude Include="..\src\app.h" />
     <ClInclude Include="..\src\chunk\chunk.h">
       <Filter>chunk</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="includes" />
+    <ClInclude Include="..\src\frame\frame_main.h">
+      <Filter>frame</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="chunk">
       <UniqueIdentifier>{765a00cc-665c-43da-81ec-4967609057dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="frame">
+      <UniqueIdentifier>{6aaf87bd-cbf7-4289-a113-4676e82cf125}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

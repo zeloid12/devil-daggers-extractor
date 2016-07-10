@@ -11,23 +11,23 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\src\app.cpp" />
     <ClCompile Include="..\src\chunk\audio.cpp" />
     <ClCompile Include="..\src\chunk\model.cpp" />
     <ClCompile Include="..\src\chunk\model_binding.cpp" />
     <ClCompile Include="..\src\chunk\shader.cpp" />
+    <ClCompile Include="..\src\frame\frame_main.cpp" />
     <ClCompile Include="..\src\main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\src\chunk.h" />
+    <ClInclude Include="..\src\app.h" />
     <ClInclude Include="..\src\chunk\audio.h" />
     <ClInclude Include="..\src\chunk\chunk.h" />
     <ClInclude Include="..\src\chunk\model.h" />
     <ClInclude Include="..\src\chunk\model_binding.h" />
     <ClInclude Include="..\src\chunk\shader.h" />
+    <ClInclude Include="..\src\frame\frame_main.h" />
     <ClInclude Include="..\src\libs.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="includes" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{9EE6FA92-3650-4657-85FA-BCE86321B4C1}</ProjectGuid>
