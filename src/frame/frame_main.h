@@ -14,6 +14,12 @@ public:
     virtual ~Main();
 
 private:
+
+    wxDECLARE_EVENT_TABLE();
+
+    void OnOpen(wxCommandEvent& event);
+    void OnExit(wxCommandEvent& event);
+    void OnAbout(wxCommandEvent& event);
 };
 
 } // namespace frame

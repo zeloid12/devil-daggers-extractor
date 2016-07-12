@@ -1,2 +1,4 @@
 /I ..\ext\wxwidgets\include
 /I ..\ext\wxwidgets\include\msvc
+
+/I ..\src

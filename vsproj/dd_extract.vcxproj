@@ -18,6 +18,10 @@
     <ClCompile Include="..\src\chunk\shader.cpp" />
     <ClCompile Include="..\src\frame\frame_main.cpp" />
     <ClCompile Include="..\src\main.cpp" />
+    <ClCompile Include="..\src\panel\panel_audio.cpp" />
+    <ClCompile Include="..\src\panel\panel_model.cpp" />
+    <ClCompile Include="..\src\panel\panel_shader.cpp" />
+    <ClCompile Include="..\src\panel\panel_texture.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\app.h" />
@@ -28,6 +32,10 @@
     <ClInclude Include="..\src\chunk\shader.h" />
     <ClInclude Include="..\src\frame\frame_main.h" />
     <ClInclude Include="..\src\libs.h" />
+    <ClInclude Include="..\src\panel\panel_audio.h" />
+    <ClInclude Include="..\src\panel\panel_model.h" />
+    <ClInclude Include="..\src\panel\panel_shader.h" />
+    <ClInclude Include="..\src\panel\panel_texture.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{9EE6FA92-3650-4657-85FA-BCE86321B4C1}</ProjectGuid>

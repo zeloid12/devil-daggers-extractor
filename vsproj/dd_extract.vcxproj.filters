@@ -18,6 +18,18 @@
     <ClCompile Include="..\src\frame\frame_main.cpp">
       <Filter>frame</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\panel\panel_texture.cpp">
+      <Filter>panel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\panel\panel_model.cpp">
+      <Filter>panel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\panel\panel_audio.cpp">
+      <Filter>panel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\panel\panel_shader.cpp">
+      <Filter>panel</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\libs.h" />
@@ -40,6 +52,18 @@
     <ClInclude Include="..\src\frame\frame_main.h">
       <Filter>frame</Filter>
     </ClInclude>
+    <ClInclude Include="..\src\panel\panel_texture.h">
+      <Filter>panel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\panel\panel_model.h">
+      <Filter>panel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\panel\panel_audio.h">
+      <Filter>panel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\panel\panel_shader.h">
+      <Filter>panel</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="chunk">
@@ -47,6 +71,9 @@
     </Filter>
     <Filter Include="frame">
       <UniqueIdentifier>{6aaf87bd-cbf7-4289-a113-4676e82cf125}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="panel">
+      <UniqueIdentifier>{26396f6c-6737-4877-8fcc-219690a92db7}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
