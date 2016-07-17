@@ -2,11 +2,12 @@
 
 #include "wx/menu.h"
 #include "wx/msgdlg.h"
-#include "wx/dataview.h"
+#include "wx/treelist.h"
 #include "wx/sizer.h"
 #include "wx/srchctrl.h"
 #include "wx/dirdlg.h"
 
+#include "controller/controller_main.h"
 #include "panel/panel_texture.h"
 
 namespace frame
@@ -40,9 +41,9 @@ Main::Main()
     wxBoxSizer* rightSizer = new wxBoxSizer(wxVERTICAL);
 
     wxSearchCtrl* searchCtrl = new wxSearchCtrl(this, wxID_ANY, wxEmptyString, wxDefaultPosition, wxSize(200, -1));
-    wxDataViewTreeCtrl* treeView = new wxDataViewTreeCtrl(this, wxID_ANY, wxDefaultPosition, wxSize(200, -1));
+    m_treeListCtrl = new wxTreeListCtrl(this, wxID_ANY, wxDefaultPosition, wxSize(200, -1), wxTL_3STATE);
     leftSizer->Add(searchCtrl, 0, wxALL, 5);
-    leftSizer->Add(treeView, 1, wxALL, 5);
+    leftSizer->Add(m_treeListCtrl, 1, wxALL, 5);
 
     // tmp
     panel::Texture* texture = new panel::Texture(this);
@@ -63,9 +64,9 @@ Main::~Main()
 void Main::OnOpen(wxCommandEvent& event)
 {
     wxDirDialog* dlg = new wxDirDialog(this, "Select Devil Daggers directory", wxEmptyString, wxDD_DIR_MUST_EXIST);
-    if (dlg->ShowModal() == wxOK)
+    if (dlg->ShowModal() == wxID_OK)
     {
-
+        m_signalOpen.fire(dlg->GetPath(), *m_treeListCtrl);
     }
 
     delete dlg;

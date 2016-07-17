@@ -3,9 +3,19 @@
 
 #include "wx/app.h"
 
+namespace controller
+{
+    class Main;
+}
+
 namespace frame
 {
     class Main;
+}
+
+namespace resource
+{
+    class Manager;
 }
 
 class App final : public wxApp
@@ -20,6 +30,8 @@ public:
 private:
 
     frame::Main* m_mainFrame;
+    controller::Main* m_mainController;
+    resource::Manager* m_resourceManager;
 };
 
 #endif // APP_H

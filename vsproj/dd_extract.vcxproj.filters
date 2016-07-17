@@ -30,6 +30,12 @@
     <ClCompile Include="..\src\panel\panel_shader.cpp">
       <Filter>panel</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\resource\resource_manager.cpp">
+      <Filter>resource</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\controller\controller_main.cpp">
+      <Filter>controller</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\libs.h" />
@@ -64,6 +70,13 @@
     <ClInclude Include="..\src\panel\panel_shader.h">
       <Filter>panel</Filter>
     </ClInclude>
+    <ClInclude Include="..\src\resource\resource_manager.h">
+      <Filter>resource</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\controller\controller_main.h">
+      <Filter>controller</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\signal.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="chunk">
@@ -74,6 +87,12 @@
     </Filter>
     <Filter Include="panel">
       <UniqueIdentifier>{26396f6c-6737-4877-8fcc-219690a92db7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="resource">
+      <UniqueIdentifier>{73be2c12-8bcc-4707-9044-d567bbfa6c82}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="controller">
+      <UniqueIdentifier>{a04faba1-5bb8-4343-a400-f0c876825697}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
