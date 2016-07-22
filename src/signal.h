@@ -51,7 +51,7 @@ public:
     {
         for (auto& slot : m_slots)
         {
-            slot.m_callback(arguments...);
+            slot.m_callback(std::forward<t_args>(arguments)...);
         }
     }
 

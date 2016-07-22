@@ -17,6 +17,8 @@ wxBEGIN_EVENT_TABLE(Main, wxFrame)
     EVT_MENU(wxID_OPEN, Main::OnOpen)
     EVT_MENU(wxID_EXIT, Main::OnExit)
     EVT_MENU(wxID_ABOUT, Main::OnAbout)
+    EVT_TREELIST_ITEM_CHECKED(0, Main::OnItemChecked)
+    EVT_TREELIST_ITEM_ACTIVATED(0, Main::OnItemActivated)
 wxEND_EVENT_TABLE()
 
 Main::Main()
@@ -41,7 +43,7 @@ Main::Main()
     wxBoxSizer* rightSizer = new wxBoxSizer(wxVERTICAL);
 
     wxSearchCtrl* searchCtrl = new wxSearchCtrl(this, wxID_ANY, wxEmptyString, wxDefaultPosition, wxSize(200, -1));
-    m_treeListCtrl = new wxTreeListCtrl(this, wxID_ANY, wxDefaultPosition, wxSize(200, -1), wxTL_3STATE);
+    m_treeListCtrl = new wxTreeListCtrl(this, 0, wxDefaultPosition, wxSize(200, -1), wxTL_3STATE);
     leftSizer->Add(searchCtrl, 0, wxALL, 5);
     leftSizer->Add(m_treeListCtrl, 1, wxALL, 5);
 
@@ -85,6 +87,16 @@ void Main::OnAbout(wxCommandEvent& event)
         , "About"
         , wxOK | wxICON_INFORMATION
     );
+}
+
+void Main::OnItemChecked(wxTreeListEvent& event)
+{
+    m_signalItemChecked.fire(*m_treeListCtrl, event.GetItem());
+}
+
+void Main::OnItemActivated(wxTreeListEvent& event)
+{
+    m_signalItemActivated.fire(*m_treeListCtrl, event.GetItem());
 }
 
 } // namespace frame

@@ -19,7 +19,8 @@ class Main final : public wxFrame
 public:
 
     typedef Signal<void, const wxString&, wxTreeListCtrl&> SignalOpen;
-    typedef Signal<void, uint32_t> SignalItemDoubleClick;
+    typedef Signal<void, wxTreeListCtrl&, const wxTreeListItem&> SignalItemChecked;
+    typedef Signal<void, wxTreeListCtrl&, const wxTreeListItem&> SignalItemActivated;
 
 public:
 
@@ -31,9 +32,14 @@ public:
         return m_signalOpen;
     }
 
-    SignalItemDoubleClick& getSignalItemDoubleClick()
+    SignalItemChecked& getSignalItemChecked()
     {
-        return m_signalItemDoubleClick;
+        return m_signalItemChecked;
+    }
+
+    SignalItemChecked& getSignalItemActivated()
+    {
+        return m_signalItemActivated;
     }
 
 private:
@@ -44,10 +50,14 @@ private:
     void OnExit(wxCommandEvent& event);
     void OnAbout(wxCommandEvent& event);
 
+    void OnItemChecked(wxTreeListEvent& event);
+    void OnItemActivated(wxTreeListEvent& event);
+
 private:
 
     SignalOpen m_signalOpen;
-    SignalItemDoubleClick m_signalItemDoubleClick;
+    SignalItemChecked m_signalItemChecked;
+    SignalItemActivated m_signalItemActivated;
 
     wxTreeListCtrl* m_treeListCtrl;
 };

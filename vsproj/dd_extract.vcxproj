@@ -40,6 +40,9 @@
     <ClInclude Include="..\src\panel\panel_shader.h" />
     <ClInclude Include="..\src\panel\panel_texture.h" />
     <ClInclude Include="..\src\resource\resource_manager.h" />
+    <ClInclude Include="..\src\resource\resource_resource.h" />
+    <ClInclude Include="..\src\resource\resource_texture.h" />
+    <ClInclude Include="..\src\resource\resource_toc.h" />
     <ClInclude Include="..\src\signal.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

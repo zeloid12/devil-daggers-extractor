@@ -77,6 +77,15 @@
       <Filter>controller</Filter>
     </ClInclude>
     <ClInclude Include="..\src\signal.h" />
+    <ClInclude Include="..\src\resource\resource_resource.h">
+      <Filter>resource</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\resource\resource_texture.h">
+      <Filter>resource</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\resource\resource_toc.h">
+      <Filter>resource</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="chunk">
